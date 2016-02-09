@@ -1,0 +1,371 @@
+10:39:59,932 DEBUG SQL:109 - 
+    drop table if exists customer
+10:39:59,946 DEBUG SQL:109 - 
+    create table customer (
+        id bigint not null auto_increment,
+        fullName varchar(255),
+        userName varchar(255),
+        primary key (id)
+    )
+10:40:00,027 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+10:40:00,034 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [james bond]
+10:40:00,034 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [007]
+10:41:21,823 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+10:41:21,835 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [james bond]
+10:41:21,836 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [007]
+10:41:49,632 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+10:41:49,642 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [jimmy]
+10:41:49,642 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [beam]
+10:43:22,697 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+10:43:22,707 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [jimmy]
+10:43:22,707 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [beam]
+00:03:56,267 DEBUG SQL:109 - alter table AppetizerSize drop foreign key FK_l5j3ybk1s0t58xteywro33y29
+00:03:56,281 DEBUG SQL:109 - drop table if exists Appetizer
+00:03:56,288 DEBUG SQL:109 - drop table if exists AppetizerSize
+00:03:56,293 DEBUG SQL:109 - drop table if exists customer
+00:03:56,299 DEBUG SQL:109 - create table Appetizer (appitizer_id bigint not null auto_increment, name varchar(255), price float not null, primary key (appitizer_id))
+00:03:56,310 DEBUG SQL:109 - create table AppetizerSize (id bigint not null auto_increment, price float not null, size varchar(255), appetizer_id bigint, primary key (id))
+00:03:56,322 DEBUG SQL:109 - create table customer (id bigint not null auto_increment, fullName varchar(255), userName varchar(255), primary key (id))
+00:03:56,335 DEBUG SQL:109 - alter table AppetizerSize add constraint FK_l5j3ybk1s0t58xteywro33y29 foreign key (appetizer_id) references Appetizer (appitizer_id)
+00:03:56,535 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:03:56,545 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:03:56,545 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:03:56,551 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:03:56,552 TRACE BasicBinder:69 - binding parameter [1] as [BIGINT] - [null]
+00:03:56,553 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:03:56,553 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:03:56,555 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:03:56,556 TRACE BasicBinder:69 - binding parameter [1] as [BIGINT] - [null]
+00:03:56,557 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:03:56,557 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:05:57,091 DEBUG SQL:109 - alter table AppetizerSize drop foreign key FK_l5j3ybk1s0t58xteywro33y29
+00:05:57,104 DEBUG SQL:109 - drop table if exists Appetizer
+00:05:57,110 DEBUG SQL:109 - drop table if exists AppetizerSize
+00:05:57,116 DEBUG SQL:109 - drop table if exists customer
+00:05:57,122 DEBUG SQL:109 - create table Appetizer (id bigint not null auto_increment, name varchar(255), price float not null, primary key (id))
+00:05:57,132 DEBUG SQL:109 - create table AppetizerSize (id bigint not null auto_increment, price float not null, size varchar(255), appetizer_id bigint, primary key (id))
+00:05:57,141 DEBUG SQL:109 - create table customer (id bigint not null auto_increment, fullName varchar(255), userName varchar(255), primary key (id))
+00:05:57,152 DEBUG SQL:109 - alter table AppetizerSize add constraint FK_l5j3ybk1s0t58xteywro33y29 foreign key (appetizer_id) references Appetizer (id)
+00:05:57,340 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:05:57,349 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:05:57,349 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:05:57,355 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:05:57,356 TRACE BasicBinder:69 - binding parameter [1] as [BIGINT] - [null]
+00:05:57,356 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:05:57,356 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:05:57,359 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:05:57,360 TRACE BasicBinder:69 - binding parameter [1] as [BIGINT] - [null]
+00:05:57,360 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:05:57,361 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:11:31,204 DEBUG SQL:109 - alter table AppetizerSize drop foreign key FK_l5j3ybk1s0t58xteywro33y29
+00:11:31,218 DEBUG SQL:109 - drop table if exists Appetizer
+00:11:31,225 DEBUG SQL:109 - drop table if exists AppetizerSize
+00:11:31,230 DEBUG SQL:109 - drop table if exists customer
+00:11:31,235 DEBUG SQL:109 - create table Appetizer (id bigint not null auto_increment, name varchar(255), price float not null, primary key (id))
+00:11:31,245 DEBUG SQL:109 - create table AppetizerSize (id bigint not null auto_increment, price float not null, size varchar(255), appetizer_id bigint, primary key (id))
+00:11:31,258 DEBUG SQL:109 - create table customer (id bigint not null auto_increment, fullName varchar(255), userName varchar(255), primary key (id))
+00:11:31,273 DEBUG SQL:109 - alter table AppetizerSize add constraint FK_l5j3ybk1s0t58xteywro33y29 foreign key (appetizer_id) references Appetizer (id)
+00:11:31,458 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:11:31,468 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:11:31,468 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:11:31,475 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:11:31,475 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:11:31,476 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:11:31,476 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:11:31,478 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:11:31,479 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:11:31,479 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:11:31,480 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:12:04,370 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:12:04,382 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:12:04,382 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:12:04,393 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:12:04,393 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:12:04,394 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:12:04,394 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:12:04,397 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:12:04,397 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:12:04,397 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:12:04,398 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:17:35,630 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:17:35,641 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:17:35,642 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:17:35,652 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:17:35,653 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:17:35,653 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:17:35,653 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:17:35,656 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:17:35,656 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:17:35,656 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:17:35,656 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:17:35,743 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:18:06,558 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:18:06,570 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:18:06,570 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:18:06,581 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:18:06,581 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:18:06,582 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:18:06,582 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:18:06,584 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:18:06,584 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:18:06,584 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:18:06,585 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:18:06,664 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:20:43,471 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:20:43,484 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:20:43,484 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:20:43,496 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:20:43,497 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+00:20:43,497 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:20:43,497 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:20:43,499 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:20:43,500 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+00:20:43,500 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:20:43,501 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:20:43,580 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:20:43,590 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:20:43,590 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:20:43,598 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:20:43,599 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:20:43,602 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:20:43,602 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:20:43,604 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:20:43,605 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:21:32,115 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:21:32,126 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:21:32,127 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:21:32,140 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:21:32,141 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+00:21:32,141 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:21:32,141 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:21:32,144 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:21:32,144 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+00:21:32,145 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:21:32,145 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:21:32,218 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:21:32,227 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:21:32,227 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:21:32,234 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:21:32,234 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:21:32,237 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:21:32,237 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:21:32,239 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:21:32,240 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:21:32,241 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:21:32,242 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+00:25:21,153 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:25:21,166 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:25:21,166 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:25:21,177 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:25:21,178 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+00:25:21,178 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:25:21,178 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:25:21,180 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:25:21,181 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+00:25:21,181 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:25:21,181 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:25:21,273 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:25:21,281 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,282 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:25:21,288 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,288 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:25:21,290 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,291 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:25:21,293 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,293 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:25:21,295 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,296 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+00:25:21,298 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:25:21,298 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+00:25:59,928 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+00:25:59,939 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+00:25:59,939 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+00:25:59,950 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:25:59,950 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+00:25:59,951 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+00:25:59,951 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+00:25:59,953 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+00:25:59,953 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+00:25:59,954 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+00:25:59,954 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+00:26:00,030 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+00:26:00,039 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,040 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+00:26:00,048 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,049 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+00:26:00,051 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,052 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+00:26:00,054 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,054 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+00:26:00,056 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,056 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+00:26:00,058 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,058 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+00:26:00,060 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+00:26:00,061 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+01:09:17,378 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+01:09:17,391 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+01:09:17,391 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+01:09:17,480 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:09:17,481 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [9]
+01:09:17,482 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+01:09:17,482 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+01:09:17,484 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:09:17,485 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [9]
+01:09:17,485 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+01:09:17,486 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+01:09:17,559 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+01:09:17,567 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,568 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+01:09:17,574 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,575 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+01:09:17,577 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,578 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+01:09:17,580 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,581 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+01:09:17,583 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,583 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+01:09:17,584 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,585 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+01:09:17,586 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,587 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+01:09:17,589 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:09:17,590 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+01:10:37,732 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+01:10:37,745 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+01:10:37,745 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+01:10:37,756 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:10:37,757 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [10]
+01:10:37,757 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+01:10:37,758 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+01:10:37,759 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:10:37,760 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [10]
+01:10:37,760 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+01:10:37,760 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+01:10:37,835 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+01:10:37,844 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,844 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+01:10:37,851 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,852 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+01:10:37,855 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,856 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+01:10:37,858 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,858 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+01:10:37,860 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,860 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+01:10:37,862 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,862 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+01:10:37,864 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,864 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+01:10:37,866 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,866 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+01:10:37,868 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:37,868 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [9]
+01:10:57,941 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+01:10:57,954 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+01:10:57,954 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+01:10:57,965 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:10:57,966 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [11]
+01:10:57,966 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+01:10:57,966 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+01:10:57,968 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:10:57,969 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [11]
+01:10:57,969 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+01:10:57,969 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+01:10:58,048 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+01:10:58,057 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,058 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+01:10:58,065 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,065 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+01:10:58,069 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,071 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+01:10:58,073 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,073 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+01:10:58,075 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,076 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+01:10:58,078 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,078 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+01:10:58,080 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,080 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+01:10:58,082 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,083 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+01:10:58,085 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,085 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [9]
+01:10:58,087 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:10:58,088 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [10]
+01:11:16,145 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+01:11:16,156 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [jimmy]
+01:11:16,156 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [beam]
+01:30:04,103 DEBUG SQL:109 - 
+    insert 
+    into
+        customer
+        (fullName, userName) 
+    values
+        (?, ?)
+01:30:04,114 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [jimmy]
+01:30:04,114 TRACE BasicBinder:81 - binding parameter [2] as [VARCHAR] - [beam]
+01:30:13,886 DEBUG SQL:109 - insert into Appetizer (name, price) values (?, ?)
+01:30:13,898 TRACE BasicBinder:81 - binding parameter [1] as [VARCHAR] - [fries]
+01:30:13,899 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [0.0]
+01:30:13,910 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:30:13,910 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [12]
+01:30:13,911 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [2.05]
+01:30:13,911 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Small]
+01:30:13,913 DEBUG SQL:109 - insert into AppetizerSize (appetizer_id, price, size) values (?, ?, ?)
+01:30:13,914 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [12]
+01:30:13,914 TRACE BasicBinder:81 - binding parameter [2] as [FLOAT] - [4.25]
+01:30:13,914 TRACE BasicBinder:81 - binding parameter [3] as [VARCHAR] - [Large]
+01:30:13,992 DEBUG SQL:109 - select appetizer0_.id as id1_0_, appetizer0_.name as name2_0_, appetizer0_.price as price3_0_ from Appetizer appetizer0_
+01:30:14,000 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,000 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [1]
+01:30:14,007 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,007 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [2]
+01:30:14,009 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,010 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [3]
+01:30:14,011 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,011 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [4]
+01:30:14,013 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,013 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [5]
+01:30:14,014 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,015 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [6]
+01:30:14,016 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,017 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [7]
+01:30:14,018 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,018 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [8]
+01:30:14,020 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,020 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [9]
+01:30:14,022 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,022 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [10]
+01:30:14,024 DEBUG SQL:109 - select appitizers0_.appetizer_id as appetize4_0_0_, appitizers0_.id as id1_1_0_, appitizers0_.id as id1_1_1_, appitizers0_.appetizer_id as appetize4_1_1_, appitizers0_.price as price2_1_1_, appitizers0_.size as size3_1_1_ from AppetizerSize appitizers0_ where appitizers0_.appetizer_id=?
+01:30:14,025 TRACE BasicBinder:81 - binding parameter [1] as [BIGINT] - [11]
